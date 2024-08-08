@@ -18,12 +18,12 @@ jobs:
           - galactic
           - rolling
         include:
-          # Foxy Fitzroy (May 2020 - May 2023)
-          - docker_image: rostooling/setup-ros-docker:ubuntu-focal-ros-foxy-ros-base-latest
+          # Jazzy Jalisco (May 2024 - May 2029)
+          - docker_image: rostooling/setup-ros-docker:ubuntu-focal-ros-jazzy-ros-base-latest
             ros_distribution: foxy
             ros_version: 2
-          # Galactic Geochelone (May 2021 - November 2022)
-          - docker_image: rostooling/setup-ros-docker:ubuntu-focal-ros-galactic-ros-base-latest
+          # Humble Hawksbill (May 2022 - May 2027)
+          - docker_image: rostooling/setup-ros-docker:ubuntu-focal-ros-humble-ros-base-latest
             ros_distribution: galactic
             ros_version: 2
           # Rolling Ridley  (June 2020 - Present)
@@ -31,7 +31,7 @@ jobs:
             ros_distribution: rolling
             ros_version: 2
     steps:
-      - uses: ros-tooling/action-ros-ci@v0.2
+      - uses: ros-tooling/action-ros-ci@v0.3
         with:
           package-name: osqp_vendor
           target-ros2-distro: ${{ matrix.ros_distribution }}
