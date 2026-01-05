@@ -14,8 +14,8 @@ jobs:
       fail-fast: false
       matrix:
         ros_distribution:
-          - foxy
-          - galactic
+          - jazzy
+          - humble
           - rolling
         include:
           # Jazzy Jalisco (May 2024 - May 2029)
